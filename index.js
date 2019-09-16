@@ -77,7 +77,7 @@ const resolvers = {
     option: (parent, args, context, info) => {
       console.log('arg  ', args);
       const { searchInput } = args;
-      return stateOptions.filter(option => option.label.includes(searchInput));
+      return stateOptions.filter(option => option.label.toLowerCase().includes(searchInput));
     },
   },
 };
